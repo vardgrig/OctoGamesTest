@@ -1,0 +1,8 @@
+@back GlobalMap
+@stopBgm fade:0.5
+@bgm main_bgm fade:0.5
+
+@showUI GlobalMapUI
+@showQuestUI
+@globalMap
+@stop

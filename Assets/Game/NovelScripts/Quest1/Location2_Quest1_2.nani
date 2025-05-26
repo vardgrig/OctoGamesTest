@@ -1,0 +1,61 @@
+@stopBgm fade:0.5
+@bgm windmill_bgm fade:0.5
+
+@char NPC2.Happy pose:BottomRight
+NPC2: Oh, {PlayerName}! Perfect timing.
+NPC2: Before we continue, let's play a quick game.
+NPC2: You need to find matching pairs of cards.
+NPC2: Try not to miss too many — you could lose. [i] Good luck!
+
+@blur power:0.7
+@hideChars
+@hidePrinter
+@hideChars
+@showUI PairGameUI
+@minigame
+@hideUI PairGameUI
+@blur power:0
+@showPrinter
+@char NPC2.Happy pose:BottomRight
+
+NPC2: Great! Now I can tell you about the special item in the Mountains.
+NPC2: You should go and retrieve the item.
+
+@choice "Ask about the item" goto:.askItem
+@choice "Go to the Mountains" goto:.location3
+@stop
+
+# askItem
+@hideChars
+@char Player.Angry pose:BottomLeft
+Player: What is it?
+@hideChars
+@char NPC2.Happy pose:BottomRight
+NPC2: It's very important. You'll recognize it when you see it.
+@choice "I don't trust you" goto:.trustIssues
+@choice "Okay" goto:.location3
+@stop
+
+# trustIssues
+@hideChars
+@char Player.Angry pose:BottomLeft
+Player: I don't trust you.
+@hideChars
+@char NPC2.Sad pose:BottomRight
+NPC2: I understand, but I really need that item.
+NPC2: It's extremely valuable.
+NPC2: Even for you...
+NPC2: Don't ask questions. Just bring it to me.
+NPC2: I'll make sure you're rewarded.
+NPC2: And... don't give it to {NPC1}. She doesn't understand what it's truly capable of.
+
+@goto .location3
+@stop
+
+# location3
+@updateQuest
+@hideChars wait:true
+@hidePrinter
+
+@goto GlobalMap_Main
+@stop

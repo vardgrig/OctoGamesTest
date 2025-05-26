@@ -1,0 +1,10 @@
+@hideUI GlobalMapUI
+
+@back Location2
+@if G_CurrentObjectiveLocationId="Location2"
+    @hideQuestUI
+    @startQuestScript
+@else
+    @goto Location2_Idle
+@endif
+@stop

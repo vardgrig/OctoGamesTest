@@ -1,0 +1,23 @@
+@stopBgm fade:0.5
+@bgm windmill_bgm fade:0.5
+
+@char Player.Happy pose:BottomLeft
+Player: I took the item.
+Player: I think it's a golden rock.
+Player: But what should I do now?
+@char Player.Sad pose:BottomLeft
+Player: Should I give it to {NPC2}?
+Player: Or give it to {NPC1}?
+Player: Or...
+@char Player.Happy pose:BottomLeft
+Player: I could just keep it.
+Player: It must be very valuable.
+Player: I have to decide.
+
+@updateQuest
+
+@hideChars wait:true
+@hidePrinter
+
+@goto GlobalMap_Main
+@stop

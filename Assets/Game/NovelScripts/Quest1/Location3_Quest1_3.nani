@@ -1,0 +1,23 @@
+@stopBgm fade:0.5
+@bgm mountains_bgm fade:0.5
+
+@hideChars
+@char Player.Happy pose:BottomLeft
+Player: Oh! Here it is. Let's take the item.
+@hideChars
+@hidePrinter
+@showUI InteractableItemUI
+@spawnSpecialItem id:gold_rock
+@sfxFast item_equip 
+@hideUI InteractableItemUI
+
+@char Player pose:BottomLeft
+Player: Alright, I should head back to the Windmill.
+
+@updateQuest
+@lockLocation name:"Location3"
+@hideChars
+@hidePrinter
+
+@goto GlobalMap_Main
+@stop

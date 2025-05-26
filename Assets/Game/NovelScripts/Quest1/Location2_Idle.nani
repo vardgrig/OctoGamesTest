@@ -1,0 +1,11 @@
+@stopBgm fade:0.5
+@bgm windmill_bgm fade:0.5
+
+
+@char Player pose:BottomLeft
+Player: There is nothing to do here...
+@hideChars
+@hidePrinter
+
+@goto GlobalMap_Main
+@stop

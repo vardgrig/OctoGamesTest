@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae5ca01a81fc4cbcbf16414140ab25b0, type: 3}
+  m_Name: Quest1_1
+  m_EditorClassIdentifier: Assembly-CSharp:Game.Scripts.QuestSystem:ObjectiveData
+  objectiveId: 2
+  locationId: 3
+  objectiveDescription: Find the special item in the Mountains
+  objectiveScript: {fileID: -5555909049971809409, guid: 8d8d2ba73dea11f449920e1a831f9465, type: 3}

@@ -1,0 +1,16 @@
+@back GlobalMap
+@bgm main_bgm
+Hi. Welcome to our village.
+@blur power:0.7
+@showUI InputNameUI
+@inputName
+@hideUI InputNameUI
+@blur power:0
+Nice to meet you, {PlayerName}. Your small journey starts today.
+Good Luck!
+@hidePrinter
+@startQuest id:start_quest
+@showQuestUI
+@showUI GlobalMapUI
+@globalMap
+@stop

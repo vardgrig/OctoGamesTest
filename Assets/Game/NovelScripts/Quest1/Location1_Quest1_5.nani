@@ -1,0 +1,138 @@
+@stopBgm fade:0.5
+@bgm castle_bgm fade:0.5
+@char NPC2 pose:BottomRight
+NPC2: You're here!
+NPC2: Did you take the special item?
+@hideChars
+@char Player pose:BottomLeft
+Player: Yes, I took it.
+@hideChars
+@char NPC2 pose:BottomRight
+NPC2: Wonderful! You should give it to me. I'll reward you.
+@hideChars
+@char NPC1 pose:BottomRight
+NPC1: Wait! Don't listen to her. That item belongs to me — I lost it a long time ago.
+NPC1: You should return it to me. I'll make it worth your while.
+@hideChars
+@char NPC2 pose:BottomRight
+NPC2: She's lying. That's not true. I found the item, but I couldn't reach it.
+
+@choice "Give it to {NPC2}" goto:.npc2
+@choice "Give it to {NPC1}" goto:.npc1
+@choice "Keep it." goto:.keep
+@stop
+
+# npc2
+@hideChars
+@char Player pose:BottomLeft
+Player: Alright. I've decided to give it to {NPC2}.
+@hideChars
+@char NPC2 pose:BottomRight
+NPC2: Thank you! Here's your reward.
+@hideChars
+@char NPC1 pose:BottomRight
+@shake NPC1
+NPC1: You'll regret this. She tricked you!
+@hideChars
+@char Player pose:BottomLeft
+Player: I don't think so. She rewarded me.
+@hideChars
+@char NPC1 pose:BottomRight
+NPC1: No, it doesn't matter.
+NPC1: That item is more valuable than you realize.
+@hideChars
+@char NPC2 pose:BottomRight
+NPC2: Haha! What a joke. {PlayerName} made the right choice.
+@hideChars
+@char NPC1 pose:BottomRight
+NPC1: We'll see. You'll both regret this!
+NPC1: See you later.
+@completeQuest
+@hideChars
+@hidePrinter
+
+@goto GlobalMap_Main
+@stop
+
+# npc1
+@hideChars
+@char Player pose:BottomLeft
+Player: Alright. I've decided to give it to {NPC1}.
+@hideChars
+@char NPC1.Happy pose:BottomRight
+NPC1: Thank you! You returned my item.
+NPC1: You can visit me tonight for your reward.
+@hideChars
+@char NPC2.Angry pose:BottomRight
+@shake NPC2
+NPC2: You'll regret it. She deceived you!
+@hideChars
+@char Player.Happy pose:BottomLeft
+Player: I don't think so. She'll reward me.
+@hideChars
+@char NPC2.Angry pose:BottomRight
+NPC2: No, she's lying. She'll disappear tonight.
+NPC2: That item is more valuable than you think.
+@hideChars
+@char NPC1.Happy pose:BottomRight
+NPC1: Haha! What a joke. {PlayerName} made the right choice.
+@hideChars
+@char NPC2.Angry pose:BottomRight
+NPC2: We'll see. You'll both regret this!
+NPC2: See you later.
+@completeQuest
+@hideChars
+@hidePrinter
+
+@goto GlobalMap_Main
+@stop
+
+# keep
+@hideChars
+@char Player.Happy pose:BottomLeft
+Player: I've decided to keep it!
+@hideChars
+@char NPC2.Angry pose:BottomRight
+@shake NPC2
+NPC2: What?!
+@hideChars
+@char NPC1.Angry pose:BottomRight
+@shake NPC1
+NPC1: What did you just say?!
+@hideChars
+@char Player pose:BottomLeft
+Player: I'm keeping this item.
+@hideChars
+@char NPC2.Angry pose:BottomRight
+NPC2: You can't do that. You don't understand what it is.
+@hideChars
+@char NPC1.Angry pose:BottomRight
+NPC1: You can't sell it!
+@hideChars
+@char NPC2.Angry pose:BottomRight
+NPC2: You should give it to me. You'll regret keeping it.
+@hideChars
+@char NPC1.Angry pose:BottomRight
+NPC1: No! You should return it to me. It's mine. You can't use or sell it without me.
+
+@choice "Give it to {NPC2}." goto:.npc2
+@choice "Give it to {NPC1}." goto:.npc1
+@choice "Keep anyway." goto:.keepAnyway
+@stop
+
+# keepAnyway
+@hideChars
+@char Player.Happy pose:BottomLeft
+Player: No. I'm keeping it anyway.
+@hideChars
+@char NPC2.Angry pose:BottomRight
+NPC2: You'll regret this. I swear, I'll kill you one day.
+@hideChars
+@char NPC1.Angry pose:BottomRight
+NPC1: Yeah... I'll come for your head.
+@completeQuest
+@hideChars
+@hidePrinter
+
+@goto GlobalMap_Main
+@stop

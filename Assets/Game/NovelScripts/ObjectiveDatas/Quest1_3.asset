@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae5ca01a81fc4cbcbf16414140ab25b0, type: 3}
+  m_Name: Quest1_3
+  m_EditorClassIdentifier: Assembly-CSharp:Game.Scripts.QuestSystem:ObjectiveData
+  objectiveId: 4
+  locationId: 1
+  objectiveDescription: Go back to the Castle
+  objectiveScript: {fileID: -5555909049971809409, guid: cd24b2f2d9b37914d902f390e87a6408, type: 3}

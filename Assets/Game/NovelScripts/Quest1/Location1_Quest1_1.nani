@@ -1,0 +1,28 @@
+@stopBgm fade:0.5
+@bgm castle_bgm fade:0.5
+
+@completeQuest
+
+@char NPC1.Sad pose:BottomRight
+NPC1: Hello, {PlayerName}. I really need your help with something important.
+NPC1: Could you go speak with {NPC2} at the Windmill? She has some information we need.
+
+@choice "Okay" goto:.location2
+@choice "Ask more questions" goto:.moreInfo
+@stop
+
+# moreInfo
+@hide NPC1
+@char Player.Angry pose:BottomLeft
+Player: What kind of information?
+@hide Player
+@char NPC1 pose:BottomRight
+NPC1: Just head to the Windmill — it'll all make sense once you talk to her.
+@goto .location2
+
+# location2
+@hideChars wait:true
+@hidePrinter
+@startQuest id:quest_1
+@goto GlobalMap_Main
+@stop
